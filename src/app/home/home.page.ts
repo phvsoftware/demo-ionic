@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { AppareilsPage } from '../appareils/appareils.page';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public navCtrl: NavController) {
+
+  }
+
+  onGoToAppareils() {
+    console.log("clic !");
+    this.navCtrl.navigateForward('appareils');
+  }
 
 }
