@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavParams } from '@ionic/angular';
 
 @Component({
   selector: 'app-single-appareil',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SingleAppareilPage implements OnInit {
 
-  constructor() { }
+  name: string;
+
+  constructor(public navParams: NavParams) { }
 
   ngOnInit() {
+    this.name = this.navParams.get('appareil');
   }
 
 }
